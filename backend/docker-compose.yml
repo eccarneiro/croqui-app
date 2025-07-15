@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db
+
+  #backend:
+  #  build: .
+  #  container_name: croqui-backend
+  #  ports:
+  #   - "5000:5000"
+  #  environment:
+  #   - MONGO_URI=mongodb://mongodb:27017/croqui
+  #   - JWT_SECRET=meusegredosecreto
+  # depends_on:
+  #   - mongodb
